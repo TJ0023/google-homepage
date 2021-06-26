@@ -1,55 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <style>
 
-        .center {
-            display:block;
-            margin-left: auto;
-            margin-right: auto;
+        html {
+            height: 100%;
         }
-        
-        .li {
-            color: rgba(0, 0, 0, 0.87);
-            font-size: 13px;
-            font-family: Arial, sans-serif;
+        body {
+            min-height: 100%;
+        }
+        ul {
+            display: inline;
             list-style-type: none;
-            margin: 2px;
-            padding-right: 0 0 0 15px;
-            transform: translateY(-10%);
-            float: left;
+            overflow: hidden;
         }
-        
-        .navbar {
-            display: block;
-            padding: 8px;
-            background-color: rgb(255, 255, 255);
-            text-decoration: rgba(0, 0, 0, 0.87);
-            text-decoration-color: rgba(0, 0, 0, 0.87);
-         }
-
-        .navbar:hover {
+        .links {
+            float: right;
+            text-decoration: none;
+            font-family:arial, sans-serif;
+            font-size: 13px;
+            padding: 5px 5px
+        }
+        .links:hover{
             text-decoration: underline;
         }
-
-        .navbar:visited {
-            text-decoration: rgba(0, 0, 0, 0.87);
-            color:rgba(0, 0, 0, 0.87);
+        .links:visited {
+            text-decoration: rgb(0,0,0,0,87);
+            color: rgb(0,0,0,0.87);
+        }
+        .links a {
+            color: rgba(0, 0, 0, 0.87);
+            display: block;
+            text-align: center;
+            padding: 10px 10px;
+            text-decoration: none;
+            font-size: 13px;
         }
 
-        .topnav {
-            list-style-type: none;
-            margin:0;
-            padding:0;
-            overflow: hidden;
-            float:right;
-            line-height:27px;
+        .grid {
+            float: right;
+            height: 23px;
+            position:relative;
+            bottom: -5px;
+
         }
 
         .SignIn {
             color: #FFFFFF;
             font-family: Arial, sans-serif;
             list-style-type: none;
-            margin: 2px;
+            margin: 10px;
             padding-right: 0 0 0 15px;
             float: right;
             background-color: rgb(26,115,232);
@@ -63,16 +62,16 @@
             display: flex;
             font-size: 14px;
             font-weight: 500; 
-            text-align: center;
             text-decoration-style: solid;
             min-width:96px;
             width: 96px;
             height: 36px;
+            padding: 0px;
             box-sizing: border-box;
             display: inline-block;
-            line-height: 10x;
+            line-height: 0x;
             position: static;
-            transform: translateY(10%);
+            transform: translateY(25%);
             z-index: auto;
             color:rgb(255, 255, 255)
         }
@@ -80,45 +79,129 @@
         .SignInButton:visited {
             text-decoration: #2d5cb7;
         }
+
+        .Logo {
+            text-align: center;
+            margin-top: 200px;
+            margin-bottom: 20px;
+            width: 50%;
+        }
+
+        .Box {
+            margin: 0 auto;
+            width: 584px;
+            border-radius: 24px;
+            border: 1px solid #dfe1e5;
+            background: #fff;
+        }
+
+        .Box:hover { 
+            box-shadow: 1px 1px 8px 1px #dcdcdc;
+        }
+
+        .Box:focus-within {
+            box-shadow: 1px 1px 8px 1px #dcdcdc;
+            outline: none;
+        }
+
+        .Searchbar {
+            background-color: transparent;
+            border-bottom-color: rgba(0, 0, 0, 0.87);
+            height: 45px;
+            border: none; 
+            width: 500px;
+            font-family: arial, sans-serif;
+            font-size: 16px;
+            outline: none;
+        }
+
+        .MagnifyingGlass {
+            height: 22px;
+            position: relative;
+            top: 5px;
+            left: 3px;
+        }
+        .voice {
+            height: 22px;
+            position: relative;
+            top: 5px;
+            left: -5px;
+        }
+
+        .Buttons {
+            margin-top:30px;
+        }
+        
+        .button {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            color: #3c4043;
+            font-family: arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 20px;
+            margin: 11px 4px;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .button:hover {
+            box-shadow: 0 1px 1px rgb (0 0 0 /10%);
+            background-color: #f8f9fa;
+            border: 1px solid #dadce0;
+            color: #202124;
+        }
+        
+        .button:focus {
+            border: 1px solid #4285f4;
+            outline:none;
+        }
         </style>
 
-
-
-<br>
-
-<div class="topnav">
-
-    <div class="li">
-        <a href="https://mail.google.com/mail/&ogbl" class="navbar">Gmail</a>
-    </div>
-
-    <div class="li">
-        <a href="https://www.google.com.ph/imghp?hl=en&ogbl" class="navbar">Images</a>
-    </div>
-
-<div class="li">
-    <a href="">...</a>
-</div>
-
-<div class="SignIn">
-    <a href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ" class="SignInButton">Sign in</a>
-</div>
-
-</div>
+<center>
+<header>
+    <ul>
+        <div class="SignIn">
+        <li>
+            <a class="SignInButton" href="https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/&ec=GAZAmgQ">
+                Sign in
+        </a>
+        </li>
+        </div>
+        </li>
+        <li><a href="#grid"><img class="grid" src="Google Logo and Icons/GAppsIcon.png" title="GoogleApps">
+        </a>
+        </li>
+        <li>
+            <a class="links" href="https://www.google.com.ph/imghp?hl=en&ogbl">
+                Images
+        </a>
+        <li>
+            <a class="links" href="https://mail.google.com/mail/&ogbl">
+                Gmail
+        </a>
+        </li>
+   
+    </ul>
 <!---- I don't know how to space it yet :) -->
+</header>
+    <div class="Logo">
 
-<br>
-<body>
-<div>
-<img src="Google Logo and Icons/Google_2015_logo.svg.png" alt="Google's 2015 logo" width="272" height="92" class="center">
-
-
-    <h1 class="center"> TEST </h1>
-
+        <img src="Google Logo and Icons/Google_2015_logo.svg.png" 
+        alt="Google's 2015 logo" width="272" height="92">
+        
+        </div>
 </div>
-</body>
-
-
-
+<div class="Box">
+    <a href="#"><img class="MagnifyingGlass" src="https://upload.wikimedia.org/wikipedia/commons/2/22/Google_Magnifying_Glass.svg"></a>
+<input class="Searchbar" type="text" title="Search">
+<a href="#"> <img class="voice" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/716px-Google_mic.svg.png"
+title="Search by Voice"></a>
+</div>
+</div>
+<div class="Buttons">
+    <button class="button" type="button">Google Search</button>
+    <button class="button" type="button">I'm Feeling Lucky</button>
+</div>
+</center> 
 
 </html>
